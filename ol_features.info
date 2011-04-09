@@ -1,0 +1,7 @@
+core = "7.x"
+dependencies[] = "features"
+features[filter][] = "full_html"
+features[filter][] = "plain_text"
+name = "OL Migrate"
+package = "OL"
+php = "5.2.4"
