@@ -159,6 +159,78 @@ function ol_features_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-article-field_related_article'
+  $fields['node-article-field_related_article'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_related_article',
+      'foreign keys' => array(
+        'nid' => array(
+          'columns' => array(
+            'nid' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'nid' => array(
+          0 => 'nid',
+        ),
+      ),
+      'module' => 'node_reference',
+      'settings' => array(
+        'referenceable_types' => array(
+          'article' => 'article',
+        ),
+      ),
+      'translatable' => '1',
+      'type' => 'node_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'article',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'node_reference',
+          'settings' => array(),
+          'type' => 'node_reference_default',
+          'weight' => 3,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'module' => 'node_reference',
+          'settings' => array(),
+          'type' => 'node_reference_default',
+          'weight' => '3',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_related_article',
+      'label' => 'Related articles',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'node_reference',
+        'settings' => array(
+          'autocomplete_match' => 'contains',
+          'autocomplete_path' => 'node_reference/autocomplete',
+          'size' => '60',
+        ),
+        'type' => 'node_reference_autocomplete',
+        'weight' => '-1',
+      ),
+    ),
+  );
+
   // Exported field: 'node-article-field_text'
   $fields['node-article-field_text'] = array(
     'field_config' => array(
@@ -230,6 +302,7 @@ function ol_features_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Description');
   t('Image');
+  t('Related articles');
   t('Text');
 
   return $fields;
