@@ -2,6 +2,7 @@ dependencies[] = comment
 dependencies[] = field_ui
 dependencies[] = toolbar
 dependencies[] = overlay
+dependencies[] = migrate
 dependencies[] = migrate_ui
 dependencies[] = image
 dependencies[] = menu
